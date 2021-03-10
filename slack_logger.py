@@ -61,7 +61,7 @@ class SlackFormatter(logging.Formatter):
             ret['color'] = 'danger'
 
         ret['author_name'] = record.levelname
-        ret['title'] = record.name
+        #ret['title'] = record.name
         ret['ts'] = record.created
         ret['text'] = super(SlackFormatter, self).format(record)
         return ret
